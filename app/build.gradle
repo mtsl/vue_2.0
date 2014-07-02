@@ -1,0 +1,36 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 14
+    buildToolsVersion "19.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 18
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+
+dependencies {
+    compile files('libs/jackson-annotations-2.2.1.jar')
+    compile files('libs/jackson-core-2.1.0.jar')
+    compile files('libs/jackson-databind-2.1.0.jar')
+    compile files('libs/lombok-1.12.6.jar')
+    compile files('libs/objectify-4.0rc1.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/google-play-services.jar')
+    compile 'com.google.android.gms:play-services:4.4.52'
+}
