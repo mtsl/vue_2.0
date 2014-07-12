@@ -11,6 +11,7 @@ import android.app.Dialog;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.lateralthoughts.vue.services.logging.Logger;
 import com.lateralthoughts.vue.services.sidekick.PersistentWatcher;
 
 /**
@@ -28,14 +29,37 @@ public class LandingPageActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        Logger.console("VueDebug","onCreate of LandingPage invoked");
+
+
+        boolean isAvailable = arePlayServicesAccessible();
+        Intent watcherServiceIntent = new Intent(this, PersistentWatcher.class);
+        watcherServiceIntent.putExtra(PersistentWatcher.REASON, PersistentWatcher.START_SIDEKICK);
+        startService(watcherServiceIntent);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        Intent watcherServiceIntent = new Intent(this, PersistentWatcher.class);
-        watcherServiceIntent.putExtra(PersistentWatcher.REASON, PersistentWatcher.START_SIDEKICK);
-        startService(watcherServiceIntent);
+        Logger.console("VueDebug","onResume of LandingPage invoked");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Logger.console("VueDebug","onPause of LandingPage invoked");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Logger.console("VueDebug","onStop of LandingPage invoked");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Logger.console("VueDebug","onDestroy of LandingPage invoked");
     }
 
     public static class LocationErrorFragment extends DialogFragment {
