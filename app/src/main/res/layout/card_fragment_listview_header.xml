@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/header_user_info_id"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:hint="Personalize your shopping experience."
+        android:textColor="@android:color/holo_red_dark" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_user_info_id"
+        android:layout_marginTop="-16dp"
+        android:visibility="gone"
+        android:id="@+id/user_details_card"
+       
+        android:background="@drawable/search_bg_shadow" >
+
+        <TextView
+            android:id="@+id/card_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Welcome to a whole new shopping experience," />
+
+    </RelativeLayout>
+ 
+ <RelativeLayout android:layout_width="match_parent"
+       android:layout_below="@+id/user_details_card"
+       android:layout_height="wrap_content">
+    <include
+        android:id="@+id/login_card"
+        layout="@layout/login_card" />
+    </RelativeLayout>
+</RelativeLayout>
