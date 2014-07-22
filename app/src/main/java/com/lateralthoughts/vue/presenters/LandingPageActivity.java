@@ -3,6 +3,7 @@ package com.lateralthoughts.vue.presenters;
 //internal Vue imports
 
 //android imports
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.app.Dialog;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.lateralthoughts.vue.R;
 import com.lateralthoughts.vue.services.logging.Logger;
 import com.lateralthoughts.vue.services.sidekick.PersistentWatcher;
 
@@ -25,17 +27,19 @@ import com.lateralthoughts.vue.services.sidekick.PersistentWatcher;
  */
 
 public class LandingPageActivity extends FragmentActivity {
-
+    private  CardFragment mLandingAislesFrag;
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        Logger.console("VueDebug","onCreate of LandingPage invoked");
-
+        Logger.console("onCreate of LandingPage invoked", "VueDebug");
+        setContentView(R.layout.landing_page);
 
         boolean isAvailable = arePlayServicesAccessible();
         Intent watcherServiceIntent = new Intent(this, PersistentWatcher.class);
         watcherServiceIntent.putExtra(PersistentWatcher.REASON, PersistentWatcher.START_SIDEKICK);
         startService(watcherServiceIntent);
+        //load cards fragment into screen.
+        loadVueCardsFragment();
     }
 
     @Override
@@ -89,6 +93,16 @@ public class LandingPageActivity extends FragmentActivity {
 
         }
         return returnCode;
+    }
+
+    /**
+     * Attaching the cards fragment to main screen, which holds the landing screen scrolling cards view fragment.
+     */
+    private void loadVueCardsFragment(){
+        mLandingAislesFrag = new CardFragment();
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.content_frame, mLandingAislesFrag).commit();
     }
 
 }

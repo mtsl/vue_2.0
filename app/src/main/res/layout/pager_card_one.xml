@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/first_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search_bg_shadow" >
+
+    <ImageView
+        android:id="@+id/pager_image_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout_one"
+        android:layout_marginBottom="22dp" />
+
+    <RelativeLayout
+        android:id="@+id/pager_bottom_content_one"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignBottom="@+id/pager_image_one"
+        android:layout_marginBottom="-22dp" >
+
+        <ImageView
+            android:id="@+id/pager_suggester_image_id_one"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/vue_launcher_icon" />
+
+        <TextView
+            android:id="@+id/suggest_text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/pager_suggester_image_id_one"
+            android:gravity="bottom"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="10"
+            android:text="Suggested by"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/img_card_suggester_name_one"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_below="@+id/suggest_text_id"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/pager_suggester_image_id_one"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Corol White" />
+        <TextView
+            android:id="@+id/find_at__id"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/pager_find_price_id_one"
+            android:gravity="bottom"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="10"
+            android:text="Find At"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/pager_card_find_id_one"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_below="@+id/find_at__id"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/pager_find_price_id_one"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Corol White" />
+       
+
+        <TextView
+            android:id="@+id/pager_find_price_id_one"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6dp"
+            android:gravity="center"
+            android:text="$42"
+            android:background="@drawable/round_corners"
+            android:textColor="@android:color/white" />
+ 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/card_bottom" />
+    </RelativeLayout>
+  <!--  <include
+        android:id="@+id/info_card_lay"
+        layout="@layout/info_card"
+        android:visibility="gone" />-->
+</RelativeLayout>

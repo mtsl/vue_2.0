@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="top_card_height">64dp</dimen>
+    <dimen name="card_bottom_text_height">48dp</dimen>
+     <dimen name="image_card_bottom_layout_height">48dp</dimen>
+      <dimen name="feedback_text_size">18dp</dimen>
+       <dimen name="feedback_edit_lay_height">100dp</dimen>
+
+</resources>

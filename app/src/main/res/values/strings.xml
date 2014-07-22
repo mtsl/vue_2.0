@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Vue2.0</string>
+    <string name="send_feedback">Send Now</string>
+    <string name="starts_in_two_days">starts in 2 days...</string>
+    <string name="rate_now">Please rate now!</string>
+    <string name="google_button_text">Personalize using Google+</string>
+    <string name="fb_button_text">Personalize using Facebook</string>
 </resources>
