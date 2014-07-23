@@ -3,15 +3,17 @@ package com.lateralthoughts.vue.presenters;
 //internal Vue imports
 
 //android imports
+
+import android.app.Dialog;
 import android.app.FragmentManager;
 import android.content.Intent;
-import android.support.v4.app.DialogFragment;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
-import android.app.Dialog;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.lateralthoughts.vue.R;
 import com.lateralthoughts.vue.services.logging.Logger;
 import com.lateralthoughts.vue.services.sidekick.PersistentWatcher;
@@ -28,6 +30,7 @@ import com.lateralthoughts.vue.services.sidekick.PersistentWatcher;
 
 public class LandingPageActivity extends FragmentActivity {
     private  CardFragment mLandingAislesFrag;
+    private GoogleApiClient mGoogleApiClient;
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);

@@ -5,16 +5,16 @@
     android:background="@drawable/search_bg_shadow" >
     <RelativeLayout
         android:id="@+id/facebook_id"
-        android:layout_width="250dp"
-        android:layout_height="52dp"
+        android:layout_width="@dimen/login_button_layout_width"
+        android:layout_height="@dimen/login_button_layout_height"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="@dimen/login_button_layout_margin"
         android:background="@drawable/round_corner" >
 
         <LinearLayout
             android:id="@+id/shadow_id"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="@dimen/login_button__height"
             android:layout_margin="1dp"
             android:background="@drawable/drop_shadow" >
 
@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_marginBottom="2dp"
+                android:layout_marginBottom="@dimen/margin_2dp"
                 android:background="@drawable/round_corner_fb"
                 android:gravity="center"
                 android:text="@string/fb_button_text"
@@ -33,26 +33,26 @@
 
     <RelativeLayout
         android:id="@+id/g_plus__layout_id"
-        android:layout_width="250dp"
-        android:layout_height="52dp"
+        android:layout_width="@dimen/login_button_layout_width"
+        android:layout_height="@dimen/login_button_layout_height"
         android:layout_below="@+id/facebook_id"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="@dimen/login_button_layout_margin"
         android:background="@drawable/round_corner" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="@dimen/login_button__height"
             android:layout_margin="1dp"
-            android:layout_marginBottom="48dp"
+            android:layout_marginBottom="@dimen/login_button_layout_bottom_margin"
             android:background="@drawable/drop_shadow" >
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_marginBottom="2dp"
-                android:background="@drawable/round_corner_g_puls"
+                android:layout_marginBottom="@dimen/margin_2dp"
+                android:background="@drawable/round_corner_g_plus"
                 android:gravity="center"
                 android:text="@string/google_button_text"
                 android:textColor="@color/white" >
@@ -62,7 +62,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="28dp"
+        android:layout_height="@dimen/login_button_layout_margin"
         android:layout_below="@+id/g_plus__layout_id" />
 
 </RelativeLayout>

@@ -10,13 +10,13 @@ public class CardViewHolder {
     AisleContentBrowser aisleContentBrowser;
 
     ImageView aisleOwnerProfilePic;
-    TextView aisleOwnerCardOwnerNameTview;
+    TextView aisleOwnerNameTView;
     ImageView ImgCardPhotoPicOne;
     ImageView imgCardProfilePicOne;
     TextView imgCardSuggesterOne;
     TextView imgCardDescOne;
     RelativeLayout cardOne;
-    RelativeLayout infLayout;
+    RelativeLayout infoLayout;
     RelativeLayout topLayout;
     RelativeLayout shopCardLay;
     RelativeLayout createAisleId;

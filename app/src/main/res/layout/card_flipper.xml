@@ -19,28 +19,34 @@
             android:focusable="true" >
             <include layout="@layout/pager_card_one" />
         </com.lateralthoughts.vue.presenters.AisleContentBrowser>
-
+        <RelativeLayout
+            android:id="@+id/pager_overflow_layout_id"
+            android:layout_width="@dimen/vue_icon_touch_area_dimensions"
+            android:layout_height="@dimen/vue_icon_touch_area_dimensions"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/product_card_overflow_icon_top_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" >
         <ImageView
             android:id="@+id/pager_overflow_id"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="22dp"
+            android:layout_width="@dimen/vue_icon_dimensions"
+            android:layout_height="@dimen/vue_icon_dimensions"
+            android:src="@drawable/vue_launcher_icon"
              />
+          </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/pager_next_layout_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/vue_icon_touch_area_dimensions"
+            android:layout_height="@dimen/vue_icon_touch_area_dimensions"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
-            android:layout_marginRight="16dp" >
+            android:layout_marginRight="@dimen/activity_horizontal_margin" >
 
             <ImageView
                 android:id="@+id/pager_next_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/vue_icon_dimensions"
+                android:layout_height="@dimen/vue_icon_dimensions"
+                android:src="@drawable/vue_launcher_icon"
                   />
         </RelativeLayout>
     </RelativeLayout>
@@ -48,23 +54,24 @@
     <TextView
         android:id="@+id/bottom_view_id"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/card_bottom_text_height"
+        android:layout_height="@dimen/product_card_bottom_text_height"
         android:layout_below="@+id/pager_layout_id"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="-12dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/product_card_bottom_text_top_margin"
         android:gravity="center_vertical"
-        android:text="@string/starts_in_two_days"
+        android:text="@string/sample_starts_in_two_days"
          />
 
     <TextView
         android:id="@+id/bottom_view_id_rate_now"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/card_bottom_text_height"
+        android:layout_height="@dimen/product_card_bottom_text_height"
         android:layout_below="@+id/pager_layout_id"
-        android:layout_marginTop="-12dp"
+        android:layout_marginTop="@dimen/product_card_bottom_text_top_margin"
         android:layout_toRightOf="@+id/bottom_view_id"
         android:gravity="center_vertical"
-        android:text="@string/rate_now"
+        android:text="@string/sample_rate_now"
         android:textColor="@android:color/holo_orange_light" />
 
 </RelativeLayout>
+  <!--each icon size is 32 dp and its touch area is 42 dp.-->
