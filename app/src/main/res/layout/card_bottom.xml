@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/card_bottom_id"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/product_card_bottom_layout_height" >
+    android:layout_height="@dimen/product_card_bottom_layout_height">
 
     <TextView
         android:id="@+id/card_bottom_text"
@@ -14,8 +14,7 @@
         android:ellipsize="end"
         android:gravity="left"
         android:maxLines="2"
-        android:text="@string/sample_Trending_in_San_Fransisco" >
-    </TextView>
+        android:text="@string/sample_Trending_in_San_Fransisco"></TextView>
 
     <RelativeLayout
         android:id="@+id/card_create_aisle_id"
@@ -23,8 +22,7 @@
         android:layout_height="@dimen/vue_icon_touch_area_dimensions"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="@dimen/margin_8dp"
-        android:layout_toLeftOf="@+id/card_shop_cart_id"
-          >
+        android:layout_toLeftOf="@+id/card_shop_cart_id">
 
         <ImageView
             android:layout_width="@dimen/vue_icon_dimensions"
@@ -39,8 +37,7 @@
         android:layout_height="@dimen/vue_icon_touch_area_dimensions"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="@dimen/margin_8dp"
-          >
+        android:layout_marginRight="@dimen/margin_8dp">
 
         <ImageView
             android:layout_width="@dimen/vue_icon_dimensions"

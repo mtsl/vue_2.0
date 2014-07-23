@@ -18,7 +18,7 @@ public class CardWithFlipper extends DataAdapter {
     private int mPagerCardBottomMargin = 22 + 48;
     private int mTempHeight = 1000;
 
-    
+
     CardWithFlipper(Context context) {
         super(context);
         mContext = context;
@@ -26,10 +26,10 @@ public class CardWithFlipper extends DataAdapter {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         Resources resources = mContext.getResources();
     }
-    
+
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        final CardViewHolder  viewHolder;
+        final CardViewHolder viewHolder;
         if (convertView == null) {
             viewHolder = new CardViewHolder();
             convertView = mInflater.inflate(R.layout.card_flipper, null);
@@ -42,13 +42,12 @@ public class CardWithFlipper extends DataAdapter {
         // set the params based on the best image height in the aisle.
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                 android.widget.RelativeLayout.LayoutParams.MATCH_PARENT,
-                Utils.getCurrentCardHeight(mTempHeight,mContext)
-                        + Utils.getPixel(mContext, mPagerCardBottomMargin));
+                Utils.getCurrentCardHeight(mTempHeight, mContext)
+                        + Utils.getPixel(mContext, mPagerCardBottomMargin)
+        );
         viewHolder.aisleContentBrowser.setLayoutParams(params);
         return convertView;
     }
-
-    
 
 
 }

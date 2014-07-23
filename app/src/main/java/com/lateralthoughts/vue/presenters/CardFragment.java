@@ -40,6 +40,7 @@ public class CardFragment extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -70,6 +71,7 @@ public class CardFragment extends Fragment {
                         break;
                 }
             }
+
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem,
                                  int visibleItemCount, int totalItemCount) {

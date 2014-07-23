@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/product_card_top_layout_height"
     android:layout_marginLeft="@dimen/activity_horizontal_margin"
-    android:layout_marginRight="@dimen/activity_horizontal_margin" >
+    android:layout_marginRight="@dimen/activity_horizontal_margin">
 
     <ImageView
         android:id="@+id/card_user_id"
@@ -11,14 +11,14 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/margin_2dp"
-        android:src="@drawable/vue_launcher_icon"/>
+        android:src="@drawable/vue_launcher_icon" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginRight="@dimen/vue_icon_touch_area_dimensions"
         android:layout_toRightOf="@+id/card_user_id"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/card_user_heading_id"
@@ -49,15 +49,14 @@
         android:layout_height="@dimen/vue_icon_touch_area_dimensions"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="@dimen/margin_2dp"
-         >
+        android:layout_marginRight="@dimen/margin_2dp">
 
         <ImageView
             android:layout_width="@dimen/vue_icon_dimensions"
             android:layout_height="@dimen/vue_icon_dimensions"
             android:layout_centerInParent="true"
-            android:src="@drawable/vue_launcher_icon"
-             />
+
+            />
     </RelativeLayout>
 
 </RelativeLayout>

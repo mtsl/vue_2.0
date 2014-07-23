@@ -5,7 +5,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-
 public class CardViewHolder {
     AisleContentBrowser aisleContentBrowser;
 

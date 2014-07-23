@@ -3,7 +3,7 @@
     android:id="@+id/first_card"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/search_bg_shadow" >
+    android:background="@drawable/search_bg_shadow">
 
     <ImageView
         android:id="@+id/pager_image_one"
@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/vue_icon_touch_area_dimensions"
         android:layout_alignBottom="@+id/pager_image_one"
-        android:layout_marginBottom="@dimen/product_card_info_layout_margin_bottom" >
+        android:layout_marginBottom="@dimen/product_card_info_layout_margin_bottom">
 
         <ImageView
             android:id="@+id/pager_suggester_image_id_one"
@@ -51,6 +51,7 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/sample_corol_white" />
+
         <TextView
             android:id="@+id/find_at__id"
             android:layout_width="wrap_content"
@@ -74,7 +75,7 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/sample_corol_white" />
-       
+
 
         <TextView
             android:id="@+id/pager_find_price_id_one"
@@ -82,22 +83,23 @@
             android:layout_height="@dimen/vue_icon_touch_area_dimensions"
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/margin_8dp"
+            android:background="@drawable/round_corners"
             android:gravity="center"
             android:text="@string/sample_price"
-            android:background="@drawable/round_corners"
             android:textColor="@android:color/white" />
- 
+
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/bottomLayout_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" >
+        android:layout_alignParentBottom="true">
+
         <include layout="@layout/card_bottom" />
     </RelativeLayout>
-  <!--  <include
-        android:id="@+id/info_card_lay"
-        layout="@layout/info_card"
-        android:visibility="gone" />-->
+    <!--  <include
+          android:id="@+id/info_card_lay"
+          layout="@layout/info_card"
+          android:visibility="gone" />-->
 </RelativeLayout>
