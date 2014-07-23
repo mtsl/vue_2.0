@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/header_user_info_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/product_card_bottom_text_height"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:hint="@string/personalize_your_shopping_experience"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_user_info_id">
+
+        <include
+            android:id="@+id/login_card"
+            layout="@layout/login_card" />
+    </RelativeLayout>
+</RelativeLayout>

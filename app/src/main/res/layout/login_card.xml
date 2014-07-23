@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_bg_shadow">
+
+    <RelativeLayout
+        android:id="@+id/facebook_id"
+        android:layout_width="@dimen/login_button_layout_width"
+        android:layout_height="@dimen/login_button_layout_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/login_button_layout_margin"
+        android:background="@drawable/round_corner">
+
+        <LinearLayout
+            android:id="@+id/shadow_id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_button__height"
+            android:layout_margin="1dp"
+            android:background="@drawable/drop_shadow">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_2dp"
+                android:background="@drawable/round_corner_fb"
+                android:gravity="center"
+                android:text="@string/fb_button_text"
+                android:textColor="@color/white"></TextView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/g_plus__layout_id"
+        android:layout_width="@dimen/login_button_layout_width"
+        android:layout_height="@dimen/login_button_layout_height"
+        android:layout_below="@+id/facebook_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/login_button_layout_margin"
+        android:background="@drawable/round_corner">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_button__height"
+            android:layout_margin="1dp"
+            android:layout_marginBottom="@dimen/login_button_layout_bottom_margin"
+            android:background="@drawable/drop_shadow">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_2dp"
+                android:background="@drawable/round_corner_g_plus"
+                android:gravity="center"
+                android:text="@string/google_button_text"
+                android:textColor="@color/white"></TextView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_button_layout_margin"
+        android:layout_below="@+id/g_plus__layout_id" />
+
+</RelativeLayout>

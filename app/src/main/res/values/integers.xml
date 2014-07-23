@@ -1,0 +1,9 @@
+<resources>
+
+    <integer name="anim_speed">300</integer>
+    <integer name="top_card_height">64</integer>
+    <integer name="card_bottom_text_height">48</integer>
+    <integer name="image_card_bottom_layout_height">48</integer>
+    <integer name="product_card_info_text_shadow">10</integer>
+
+</resources>

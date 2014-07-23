@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Vue2.0</string>
+    <string name="send_feedback">Send Now</string>
+    <string name="google_button_text">Personalize using Google+</string>
+    <string name="fb_button_text">Personalize using Facebook</string>
+    <string name="title_activity_google_play_services">GooglePlayServicesActivity</string>
+
+    <!--sample text that will be replace once the server is ready in UI-->
+    <string name="sample_Dress_for_pool_party">Dress for pool party</string>
+    <string name="sample_Marry_Long_bottom">Marry Long bottom</string>
+    <string name="sample_Trending_in_San_Fransisco">Trending in San Fransisco.</string>
+    <string name="sample_starts_in_two_days">starts in 2 days...</string>
+    <string name="sample_rate_now">Please rate now!</string>
+    <string name="sample_corol_white">Corol White</string>
+    <string name="sample_price">$42</string>
+
+    <string name="personalize_your_shopping_experience">Personalize your shopping experience</string>
+
+    <string name="find_at">Find At</string>
+    <string name="suggested_by">Suggested by</string>
+
 </resources>

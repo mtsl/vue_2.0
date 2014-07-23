@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/product_card_top_layout_height"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:id="@+id/card_user_id"
+        android:layout_width="@dimen/product_card_top_layout_profile_pic_dimensions"
+        android:layout_height="@dimen/product_card_top_layout_profile_pic_dimensions"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_2dp"
+        android:src="@drawable/vue_launcher_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/vue_icon_touch_area_dimensions"
+        android:layout_toRightOf="@+id/card_user_id"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/card_user_heading_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_4dp"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="1"
+            android:text="@string/sample_Dress_for_pool_party" />
+
+        <TextView
+            android:id="@+id/card_user_name_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_4dp"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:maxLines="1"
+            android:text="@string/sample_Marry_Long_bottom" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/card_user_window_id"
+        android:layout_width="@dimen/vue_icon_touch_area_dimensions"
+        android:layout_height="@dimen/vue_icon_touch_area_dimensions"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_2dp">
+
+        <ImageView
+            android:layout_width="@dimen/vue_icon_dimensions"
+            android:layout_height="@dimen/vue_icon_dimensions"
+            android:layout_centerInParent="true"
+
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

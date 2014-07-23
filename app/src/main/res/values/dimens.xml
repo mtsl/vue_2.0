@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="feedback_text_size">18dp</dimen>
+    <dimen name="feedback_edit_lay_height">100dp</dimen>
+    <dimen name="product_card_top_layout_profile_pic_dimensions">48dp</dimen>
+
+    <dimen name="vue_icon_dimensions">32dp</dimen>
+    <dimen name="vue_icon_touch_area_dimensions">42dp</dimen>
+
+    <dimen name="product_card_overflow_icon_top_margin">22dp</dimen>
+    <dimen name="product_card_bottom_layout_height">48dp</dimen>
+    <dimen name="product_card_bottom_text_top_margin">-12dp</dimen>
+    <dimen name="product_card_bottom_text_height">48dp</dimen>
+    <dimen name="product_card_top_layout_height">64dp</dimen>
+    <dimen name="product_card_image_margin_bottom">22dp</dimen>
+    <dimen name="product_card_info_layout_margin_bottom">-22dp</dimen>
+
+    <dimen name="login_button_layout_width">250dp</dimen>
+    <dimen name="login_button_layout_height">52dp</dimen>
+    <dimen name="login_button__height">48dp</dimen>
+    <dimen name="login_button_layout_margin">28dp</dimen>
+    <dimen name="login_button_layout_bottom_margin">48dp</dimen>
+
+    <!--total layout height/2 (i.e) 42/2 = 21-->
+    <dimen name="product_card_info_text_views_height">21dp</dimen>
+
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="margin_4dp">4dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+
+
+</resources>
