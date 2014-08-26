@@ -6,10 +6,13 @@ package com.lateralthoughts.vue.presenters;
 
 import android.app.Dialog;
 import android.app.FragmentManager;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
+import android.telephony.TelephonyManager;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -17,6 +20,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.lateralthoughts.vue.R;
 import com.lateralthoughts.vue.services.logging.Logger;
 import com.lateralthoughts.vue.services.sidekick.PersistentWatcher;
+import com.lateralthoughts.vue.utils.VueConstants;
 
 /**
  * This is the landing page activity for Vue. By and large we should keep this activity simple. The purpose of this activity
@@ -43,6 +47,7 @@ public class LandingPageActivity extends FragmentActivity {
         startService(watcherServiceIntent);
         //load cards fragment into screen.
         loadVueCardsFragment();
+        getDeviceId();
     }
 
     @Override
@@ -109,5 +114,8 @@ public class LandingPageActivity extends FragmentActivity {
         fragmentManager.beginTransaction()
                 .replace(R.id.content_frame, mLandingAislesFrag).commit();
     }
-
+     public void getDeviceId(){
+         TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+         VueConstants.deviceId = telephonyManager.getDeviceId();
+     }
 }

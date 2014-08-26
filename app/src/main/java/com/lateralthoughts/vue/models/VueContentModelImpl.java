@@ -5,6 +5,7 @@ package com.lateralthoughts.vue.models;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.lateralthoughts.vue.AnchoredContext;
+import com.lateralthoughts.vue.presenters.DataContainer;
 import com.lateralthoughts.vue.utils.Logger;
 import com.lateralthoughts.vue.domain.VueUser;
 
@@ -68,6 +69,8 @@ public class VueContentModelImpl implements VueContentModel {
     public static final String AISLE_OWNER_IMAGE_URL = "aisleOwnerImageURL";
     public static final String AISLE_BOOKMARK_COUNT = "bookmarkCount";
 
+    private DataContainer mDataContainerListener;
+
     private VueContentModelImpl() {
         synchronized (VueContentModelImpl.class) {
             if (sContentModelHandler == null) {
@@ -110,7 +113,13 @@ public class VueContentModelImpl implements VueContentModel {
     @Override
     public void getCardsMetaData(int offset, int limit) {
     }
-
+    //set listener to notify the cards adapter when data is available
+    public void setDataRegisterListener(DataContainer dataContainerListener){
+        mDataContainerListener = dataContainerListener;
+    }
+    public DataContainer getDataRegisterListener(){
+        return mDataContainerListener;
+    }
     @Override
     public void onPause() {
         //deinitContinuousFetcher
@@ -161,7 +170,6 @@ public class VueContentModelImpl implements VueContentModel {
     //internal APIs
     private void notifyMoreAislesLoaded(JSONArray jsonArray, int offset, int limit) {
         //ArrayList<AisleWindowContent> aisleWindowContentList = new ArrayList<AisleWindowContent>();
-
         mOffset = offset + limit;
         if(mOffset >= 1000) {
             if(mTimeTakenToFetch1000Aisles == -1) {

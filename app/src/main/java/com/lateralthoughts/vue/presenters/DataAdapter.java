@@ -6,13 +6,17 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 
+import com.lateralthoughts.vue.models.VueContentModelImpl;
+
 import java.util.ArrayList;
 
 public class DataAdapter extends BaseAdapter implements DataContainer {
     //ArrayList<AisleWindowContent> mAisleWindowList = new ArrayList<AisleWindowContent>();
+ VueContentModelImpl mVueContentModel;
 
     DataAdapter(Context context) {
-
+        mVueContentModel = (VueContentModelImpl) VueContentModelImpl.getContentModel();
+        mVueContentModel.setDataRegisterListener(this);
     }
 
     public int getCount() {

@@ -21,6 +21,8 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.READ_OWNER_DATA" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+   <!-- to read the device id  -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <application
         android:name=".AnchoredContext"
@@ -44,7 +46,7 @@
         <service android:name=".services.sidekick.PersistentWatcher" />
 
         <activity
-            android:name=".login.GooglePlayServicesActivity"
+            android:name=".login.GooglePlayServicesActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:label="@string/title_activity_google_play_services" >
         </activity>
     </application>

@@ -1,72 +1,165 @@
 package com.lateralthoughts.vue.utils;
 
 public class UrlConstants {
-    // Uncomment this to point to production content server
-    // public static final String SERVER_BASE_URL =
-    // "http://2dot12-restlet.vueapi-canary-development.appspot.com/";
-    public static final String SERVER_BASE_URL = "http://2dot12-restlet.vueapi-canary.appspot.com/";
+    private static final String DEVELOPMENT_SERVER_PROJECT_ID =
+            "341676083313";
+    private static final String DEVELOPMENT_SERVER_APPLICATION_ID =
+            "vue-server-dev.appspot.com/";
 
-    private static final String CANARY_SERVER_PROJECT_ID = "876955216873";
-    private static final String DEVELOPMENT_SERVER_PROJECT_ID = "477960328185";
-    private static final String DEVELOPMENT1_SERVER_PROJECT_ID = "341676083313";
-    public static final String CURRENT_SERVER_PROJECT_ID = CANARY_SERVER_PROJECT_ID;
+    private static final String TEST_SERVER_PROJECT_ID =
+            "477960328185";
+    private static final String TEST_SERVER_APPLICATION_ID =
+            "vue-server-test.appspot.com/";
+
+    private static final String PROD_SERVER_PROJECT_ID =
+            "876955216873";
+    private static final String PROD_SERVER_APPLICATION_ID =
+            "vue-server-prod.appspot.com/";
+
+    private static final String LOCALHOST_SERVER_PROJECT_ID =
+            "0";
+    private static final String LOCALHOST_SERVER_APPLICATION_ID =
+            "localhost:8888/";
+
+
+    public static final String CURRENT_SERVER_PROJECT_ID =
+            DEVELOPMENT_SERVER_PROJECT_ID;
+    public static final String CURRENT_SERVER_APPLICATION_ID =
+            DEVELOPMENT_SERVER_APPLICATION_ID;
+
+    private static final String CURRENT_VERSION =
+            "3dot1.";
+    //private static final String CURRENT_VERSION =
+    //		"";
+    public static final String SERVER_PREFIX =
+            "https://" + CURRENT_VERSION + CURRENT_SERVER_APPLICATION_ID;
+
 
     /**
      * (C)reate routine URL's
      */
-    public static final String CREATE_USER_RESTURL = SERVER_BASE_URL
-            + "api/usercreate";
-    public static final String CREATE_AISLE_RESTURL = SERVER_BASE_URL
-            + "api/aislecreate";
-    public static final String CREATE_IMAGE_RESTURL = SERVER_BASE_URL
-            + "api/imagecreate";
-    public static final String CREATE_BOOKMARK_RESTURL = SERVER_BASE_URL
-            + "api/aislebookmarkcreate";
-    public static final String CREATE_RATING_RESTURL = SERVER_BASE_URL
-            + "api/imageratingcreate";
-    public static final String CREATE_IMAGECOMMENT_RESTURL = SERVER_BASE_URL
-            + "api/imagecommentcreate";
+    public static final String CREATE_USER_RESTURL =
+            SERVER_PREFIX + "api/user";
+    public static final String CREATE_AISLE_RESTURL =
+            SERVER_PREFIX + "api/aisle";
+    public static final String CREATE_PRODUCT_RESTURL =
+            SERVER_PREFIX + "api/product";
+    public static final String CREATE_PRODUCTCOMMENT_RESTURL =
+            SERVER_PREFIX + "api/productcomment";
+    public static final String CREATE_PRODUCTIMAGE_RESTURL =
+            SERVER_PREFIX + "api/productimage";
+    public static final String CREATE_PRODUCTRATING_RESTURL =
+            SERVER_PREFIX + "api/productrating";
+    public static final String CREATE_PRODUCTTAG_RESTURL =
+            SERVER_PREFIX + "api/producttag";
+    public static final String CREATE_BOOKMARK_RESTURL =
+            SERVER_PREFIX + "api/aislebookmarkcreate";
+    public static final String CREATE_WEBSIGNUPUSER_RESTURL =
+            SERVER_PREFIX + "api/websignupusersave";
+    public static final String CREATE_PRODUCTPROVIDER_RESTURL =
+            SERVER_PREFIX+"api/productprovider";
 
-    public static final String GET_USER_RESTURL = SERVER_BASE_URL
-            + "api/userget/id/";
-    public static final String GET_USER_FACEBOOK_ID_RESTURL = SERVER_BASE_URL
-            + "api/userget/facebook/";
-    public static final String GET_USER_GOOGLEPLUS_ID_RESTURL = SERVER_BASE_URL
-            + "api/userget/googleplus/";
-    public static final String GET_AISLE_RESTURL = SERVER_BASE_URL
-            + "api/aisleget/id/";
-    public static final String GET_AISLELIST_BYUSER_RESTURL = SERVER_BASE_URL
-            + "api/aislesget/user";
-    public static final String GET_IMAGELIST_RESTURL = SERVER_BASE_URL
-            + "api/imagesget/aisle/";
-    public static final String GET_TRENDINGAISLES_RESTURL = SERVER_BASE_URL
-            + "api/trendingaislesgetorderedbytime";
-    public static final String GET_BOOKMARK_Aisles = SERVER_BASE_URL
-            + "api/aislebookmarksgetall";
-    public static final String GET_RATINGS_RESTURL = SERVER_BASE_URL
-            + "api/imageratingsgetall";
-    public static final String GET_UNIQUE_ONETIME_IMAGE_UPLOAD_RESTURL = SERVER_BASE_URL
-            + "api/getUrlToUploadImage";
-    public static final String GET_IMAGE_FILE_RESTURL = SERVER_BASE_URL
-            + "upload";
+    /**
+     * (R)ead routine URL's
+     */
+    public static final String GET_USER_RESTURL =
+            SERVER_PREFIX + "api/user";
+    public static final String GET_USER_FACEBOOK_ID_RESTURL =
+            SERVER_PREFIX + "api/facebookuser";
+    public static final String GET_AISLE_RESTURL =
+            SERVER_PREFIX + "api/aisle";
+    public static final String GET_AISLES_BY_USER =
+            SERVER_PREFIX + "api/aisles/user";
+    public static final String GET_PRODUCT_RESTURL =
+            SERVER_PREFIX + "api/product";
+    public static final String GET_PRODUCTCOMMENT_RESTURL =
+            SERVER_PREFIX + "api/productcomment";
+    public static final String GET_PRODUCTIMAGE_RESTURL =
+            SERVER_PREFIX + "api/productimage";
+    public static final String GET_PRODUCTRATING_RESTURL =
+            SERVER_PREFIX + "api/productrating";
+    public static final String GET_PRODUCTTAG_RESTURL =
+            SERVER_PREFIX + "api/producttag";
+    public static final String GET_IMAGELIST_RESTURL =
+            SERVER_PREFIX + "api/imagesget/aisle";
+    public static final String GET_IMAGE_RESTURL =
+            SERVER_PREFIX + "api/imageget/id";
+    public static final String GET_BOOKMARKS_RESTURL =
+            SERVER_PREFIX + "api/aislebookmarksgetall";
+    public static final String GET_RATINGS_RESTURL =
+            SERVER_PREFIX + "api/imageratingsgetall";
+    public static final String GET_WEBSIGNUPUSER_RESTURL =
+            SERVER_PREFIX + "api/websignupuserget";
+    public static final String GET_TRENDINGAISLES_RESTURL =
+            SERVER_PREFIX + "api/trendingaislesgetorderedbytime";
+    public static final String GET_TRENDINGAISLESWITHIMAGES_RESTURL =
+            SERVER_PREFIX + "api/trendingaislesgetorderedbytime/withimages";
+    public static final String GET_UNIQUE_ONETIME_IMAGE_UPLOAD_RESTURL =
+            SERVER_PREFIX + "api/getUrlToUploadImage";
+    public static final String GET_IMAGE_FILE_RESTURL =
+            SERVER_PREFIX + "upload";
 
-    public static final String SEARCH_BY_KEYWORD_BASE_URL = SERVER_BASE_URL
-            + "api/getaisleswithmatchingoccassion/";
-    public static final String SEARCH_BY_USER = SERVER_BASE_URL
-            + "api/getaisleswithmatchingfacebookORGPlus/";
+    /**
+     * (U)pdate routine URL's
+     */
+    public static final String UPDATE_AISLE_RESTURL =
+            SERVER_PREFIX + "api/aisle";
+    public static final String UPDATE_BOOKMARK_RESTURL =
+            SERVER_PREFIX + "api/aislebookmarkupdate";
+    public static final String UPDATE_USER_RESTURL =
+            SERVER_PREFIX + "api/user";
+    public static final String UPDATE_PRODUCT_RESTURL =
+            SERVER_PREFIX + "api/product";
+    public static final String UPDATE_PRODUCTCOMMENT_RESTURL =
+            SERVER_PREFIX + "api/productcomment";
+    public static final String UPDATE_PRODUCTIMAGE_RESTURL =
+            SERVER_PREFIX + "api/productimage";
+    public static final String UPDATE_PRODUCTRATING_RESTURL =
+            SERVER_PREFIX + "api/productrating";
+    public static final String UPDATE_PRODUCTTAG_RESTURL =
+            SERVER_PREFIX + "api/producttag";
 
-    public static final String DELETE_IMAGE_RESTURL = SERVER_BASE_URL
-            + "api/imagedelete";
-    public static final String GET_IMAGE_RESTURL = SERVER_BASE_URL
-            + "api/imageget/id/";
 
-    public static final String UPDATE_USER_RESTURL = SERVER_BASE_URL
-            + "api/userupdate";
-    public static final String UPDATE_AISLE_RESTURL = SERVER_BASE_URL
-            + "api/aisleupdate";
-    public static final String UPDATE_BOOKMARK_RESTURL = SERVER_BASE_URL
-            + "api/aislebookmarkupdate";
-    public static final String UPDATE_RATING_RESTURL = SERVER_BASE_URL
-            + "api/imageratingupdate";
+
+    /**
+     * (D)elete routine URL's
+     */
+    public static final String DELETE_IMAGECOMMENT_RESTURL =
+            SERVER_PREFIX + "api/imagecommentdelete";
+    public static final String DELETE_USER_RESTURL =
+            SERVER_PREFIX + "api/testdeleteusertree";
+    public static final String DELETE_WEBSIGNUPUSER_RESTURL =
+            SERVER_PREFIX + "api/testwebsignupuserdelete";
+    public static final String DELETE_AISLE_RESTURL =
+            SERVER_PREFIX + "api/aisle";
+    public static final String DELETE_PRODUCT_RESTURL =
+            SERVER_PREFIX + "api/product";
+    public static final String DELETE_PRODUCTCOMMENT_RESTURL =
+            SERVER_PREFIX + "api/productcomment";
+    public static final String DELETE_PRODUCTIMAGE_RESTURL =
+            SERVER_PREFIX + "api/productimage";
+    public static final String DELETE_PRODUCTRATING_RESTURL =
+            SERVER_PREFIX + "api/productrating";
+    public static final String DELETE_PRODUCTTAG_RESTURL =
+            SERVER_PREFIX + "api/producttag";
+
+
+    /**
+     * Search URL's
+     */
+    public static final String SEARCH_BY_KEYWORD_BASE_URL =
+            SERVER_PREFIX + "api/getaisleswithmatchingoccassion/";
+    public static final String SEARCH_BY_USER =
+            SERVER_PREFIX + "api/getaisleswithmatchingfacebookORGPlus/";
+    public static final String SEARCH_BY_FIRSTNAME_OR_LASTNAME_BASE_URL =
+            SERVER_PREFIX + "api/getaisleswithmatchinguserName/";
+
+    /**
+     * Upload URL's
+     */
+    public static final String IMAGE_UPLOAD_RESTURL =
+            SERVER_PREFIX + "upload";
+    ;
+
 }
 
